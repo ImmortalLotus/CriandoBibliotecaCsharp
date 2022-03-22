@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Modelos
 {
+    /// <summary>
+    /// Define os métodos de funcionamento para uma conta corrente no banco ByteBank
+    /// </summary>
     public class ContaCorrente
     {
         private static int TaxaOperacao;
@@ -38,9 +41,14 @@ namespace ByteBank.Modelos
             }
         }
 
+        /// <summary>
+        /// Cria uma instância de conta corrente com os argumentos aqui informados.
+        /// </summary>
+        /// <param name="agencia">Deve possuir um valor maior que zero, representa o valor da <see cref="Agencia"/> da Conta</param>
+        /// <param name="numero">Deve possuir um valor maior que zero, representa o valor do <see cref="Numero"/> da conta.</param>
         public ContaCorrente(int agencia, int numero)
         {
-            if (numero <= 0)
+            if (agencia <= 0)
             {
                 throw new ArgumentException("O argumento agencia deve ser maior que 0.", nameof(agencia));
             }
