@@ -8,7 +8,7 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            ContaCorrente conta = new ContaCorrente(1, 1);
+            ContaCorrente conta = new ContaCorrente(12,12);
         }
     }
 }
